@@ -27,38 +27,19 @@
                 <artifactId>javafx-controls</artifactId>
                 <version>${javafx.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.6.0</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <plugins>
-            <!-- For Conveyor: Copy all dependencies excluding JavaFX which will be jlinked in for each platform. -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.6.0</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>target/classpath-jars</outputDirectory>
-                            <includeScope>runtime</includeScope>
-                            <excludeGroupIds>org.openjfx</excludeGroupIds>
-                            <overWriteReleases>true</overWriteReleases>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+               <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-dependency-plugin</artifactId>
+                   <version>3.6.0</version>
+               </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
 </project>
