@@ -43,7 +43,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>target/classpath-jars</outputDirectory>
+                            <outputDirectory>target/libs</outputDirectory>
                             <includeScope>runtime</includeScope>
                             <excludeGroupIds>org.openjfx</excludeGroupIds>
                             <overWriteReleases>true</overWriteReleases>
