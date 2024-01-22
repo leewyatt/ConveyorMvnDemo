@@ -1,3 +1,4 @@
 /output/
 /client/
 **/target/
+/.idea/
