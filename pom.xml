@@ -33,11 +33,16 @@
     <build>
         <pluginManagement>
             <plugins>
-               <plugin>
-                   <groupId>org.apache.maven.plugins</groupId>
-                   <artifactId>maven-dependency-plugin</artifactId>
-                   <version>3.6.0</version>
-               </plugin>
+                <!--
+                    The maven-dependency-plugin is used here for copying all project dependencies to a specified directory.
+                    This step is crucial as these dependencies are required for packaging with Conveyor later on.
+                    This ensures that all necessary dependencies are available in the desired location for the subsequent packaging process.
+                -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.6.0</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
