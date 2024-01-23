@@ -6,7 +6,8 @@
     <parent>
         <groupId>com.example</groupId>
         <artifactId>ConveyorMvnDemo</artifactId>
-        <version>1.0</version>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>components</artifactId>
